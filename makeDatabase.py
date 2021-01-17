@@ -7,6 +7,7 @@ fyf.pdr_override() # <-- Here is the fix
 
 # To create datetime objects 
 import datetime
+from datetime import date, timedelta
 
 # Import SPIndex object
 from data.data import SPIndex
@@ -22,7 +23,7 @@ def get_data():
     # Yahoo Finance
     # Set start and end dates
     start = datetime.datetime(2000, 1, 1)
-    end   = datetime.datetime(2020, 6, 8)
+    end   = date.today() - timedelta(days=1)
     
     # Grab data
     data = pdr.get_data_yahoo(stocks, start = start, end = end)
@@ -41,6 +42,5 @@ def get_data():
     # Save file
     df.to_csv('stock_data.csv')
 
-# Create database. Run this and leave untouched unless you want to update the
-# data
+# Create database. Run this file to recreate the whole database
 get_data()
