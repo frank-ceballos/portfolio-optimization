@@ -1,4 +1,0 @@
-pandas_datareader==0.8.1
-yfinance==0.1.54
-dash_core_components==1.10.0
-pandas==1.0.3
