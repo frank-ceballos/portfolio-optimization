@@ -1,1 +1,1 @@
-# portfolio-optimizationLink to original videohttps://www.youtube.com/watch?v=bvDkel5whUY
+# portfolio-optimizationI am working on creating a portfolio optmizer. Given a set of stocks, the portfolio optimizer will output a subset of stocks along its weights thatmaximize the annual return.Note: All the development is taking place in the `dev` branch. 
