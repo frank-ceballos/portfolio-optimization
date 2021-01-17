@@ -26,5 +26,21 @@ import requests
 
 
 ###############################################################################
-#                          2. Load Data                           #
+#                        2. Load Data and Shape Data                          #
 ###############################################################################
+
+# Load data
+df = pd.read_csv("stock_data.csv")
+
+# Replace index with date
+df.set_index(keys = ["Date"], drop = True, inplace = True)
+
+# Remove columns that are not the Close price
+col= list(df.columns)
+selected_cols = [column for column in col if "Close" in column]
+selected_cols = [column for column in selected_cols if "Adj" not in column]
+df = df[selected_cols]
+
+# Rename columns
+rename_col = [column.replace(" Close", "") for column in selected_cols]
+df.columns = rename_col
