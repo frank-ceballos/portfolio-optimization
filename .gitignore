@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore the stock data csv file
+stock_data.csv
+
+# Ignore random files
+.DS_Store

@@ -39,7 +39,7 @@ def get_data():
     df = pd.DataFrame(values, columns = columns, index = dates)
     
     # Save file
-    df.to_csv('data\\' + 'stock_data.csv')
+    df.to_csv('stock_data.csv')
 
 # Create database. Run this and leave untouched unless you want to update the
 # data
