@@ -22,7 +22,7 @@ def get_data():
     
     # Yahoo Finance
     # Set start and end dates
-    start = datetime.datetime(2010, 1, 1)
+    start = datetime.datetime(2017, 1, 1)
     end   = date.today() - timedelta(days=1)
     
     # Grab data

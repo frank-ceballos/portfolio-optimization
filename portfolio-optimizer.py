@@ -7,6 +7,11 @@
 # *                                                                           *
 # * The contents of this script are:                                          *
 # * 1. Importing Libraries                                                    *
+# * 2. Helper Function                                                        *
+# * 3. Load Data and Shape Data                                               *
+# * 4. Optimized Portfolio                                                    *
+# * 5. Get Discrete Allocation                                                *
+# * 6. Helper Function                                                        *
 # *                                                                           *
 # * --------------------------------------------------------------------------*
 # * AUTHORS(S): Frank Ceballos <frank.ceballos89@gmail.com>                   *
@@ -21,7 +26,6 @@
 #                          1. Importing Libraries                             #
 ###############################################################################
 import pandas as pd
-import numpy as np
 import requests
 from pypfopt.efficient_frontier import EfficientFrontier
 from pypfopt import risk_models, expected_returns
@@ -83,11 +87,11 @@ ef.portfolio_performance(verbose = True) # Any Sharpe ratio greater than 1
 
 
 ###############################################################################
-#                           5. Get Discrete Allocation                        #
+#                         5. Get Discrete Allocation                          #
 ###############################################################################
 
 # Get allocation of each share per stock
-portfolio_val = 5000  # Initial investment in USD
+portfolio_val = 10000  # Initial investment in USD
 latest_prices = get_latest_prices(df)
 weights = cleaned_weights
 da =  DiscreteAllocation(weights, latest_prices, 
